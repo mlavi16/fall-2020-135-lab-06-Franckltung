@@ -1,0 +1,76 @@
+* Fall 2020 - Lab 06
+
+* Last name:
+
+* First name:
+
+* GitHub username:
+
+* Notes:
+
+
+  
+* General instructions:
+- Fill in your name and GitHub username on top.
+- Use the Notes section to add any notes to the instructor.
+- The main lab description can be found here:
+  https://maryash.github.io/135/labs/lab_06.html 
+
+
+* Specific instructions for lab 05
+
+This lab requires that you implement doctest based tests. There is
+already a skeleton ~Makefile~ with targets for ~main~ and ~tests~ as
+well as skeleton ~.c~ ~.h~ and ~doctest.h~ files. 
+
+** Task A
+
+  For task A, write the function using the prototype ~void
+  test_ascii()~ in ~funcs.cpp~ / ~funcs.h~. It should be called from
+  main and *should not* be tested via doctest from ~tests.cpp~.
+
+** Task B
+   
+Add files ~caesar,cpp~ and ~caesar.h~ to your program. In them, write
+the two functions specified in the main lab.
+
+*These two functions should be tested via doctest form tests.cpp*. 
+
+** Task C
+
+Add files ~viginere.cpp and ~viginere.h~ to your program. In them,
+write the function specified in the main lab. This should also be
+tested via doctest from ~tests.cpp~.
+
+** Task D
+
+Add files ~decrypt.cpp~ and ~decrypt.h~ to your program and in them
+implement the functions specified in the main lab. These should also
+be tested via doctest and *should not* require any keyboard input when
+the program is run.
+
+
+** Notes
+
+I will test ~main~ but will only consider ~tests.cpp~ to determine if
+your functions area all working properly. You will have to make
+sensible decisions based on the assignment as to how many tests you
+need and what you should test for.
+
+You will have to determine what to test and how many tests are
+sufficient. Also, tests should not require keyboard input. Test values
+should be hard coded.
+
+
+
+For reference, the doctest package and documentation can be found
+[[https://github.com/onqtam/doctest][here]].
+
+
+
+*Note:* Remember that your program (including tests) should not ask
+ for any keyboard input. When run it should clearly show that all
+ tasks are implemented and work.
+
+
+
