@@ -1,12 +1,12 @@
 * Fall 2020 - Lab 06
 
-* Last name:
+* Last name: Limtung
 
-* First name:
+* First name: Franck
 
-* GitHub username:
+* GitHub username: Franckltung
 
-* Notes:
+* Notes: I used funcs to store functions that are used multiple times in the lab (isUpperCase, isLowerCase, shiftChar).
 
 
   
