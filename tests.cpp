@@ -4,11 +4,14 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 TEST_CASE("Test isLowerCase") {
 	CHECK(isLowerCase('a') == true);
 	CHECK(isLowerCase('z') == true);
 	CHECK(isLowerCase('f') == true);
+	CHECK(isLowerCase('A') == false);
+	CHECK(isLowerCase('Z') == false);
 	CHECK(isLowerCase(' ') == false);
 	CHECK(isLowerCase(0) == false);
 	CHECK(isLowerCase(127) == false);
@@ -18,6 +21,8 @@ TEST_CASE("Test isUpperCase") {
 	CHECK(isUpperCase('A') == true);
 	CHECK(isUpperCase('Z') == true);
 	CHECK(isUpperCase('F') == true);
+	CHECK(isUpperCase('a') == false);
+	CHECK(isUpperCase('z') == false);
 	CHECK(isUpperCase(' ') == false);
 	CHECK(isUpperCase(0) == false);
 	CHECK(isUpperCase(127) == false);
@@ -119,4 +124,17 @@ TEST_CASE("Test decryptVigenere") {
 	CHECK(decryptVigenere("dbftbs", "bbb") == "caesar");
 	CHECK(decryptVigenere("Vhouwimodryapfybluwtuofittrinajcfoq", "cake") == "Thequickbrownfoxjumpsoverthelazydog");
 	CHECK(decryptVigenere("vhou", "Thequickbrownfoxjumpsoverthelazydog") == "cake");
+}
+
+TEST_CASE("Test decodeCaesar") {
+	CHECK(decodeCaesar("Unchanged") == "Unchanged");
+	CHECK(decodeCaesar("") == "");
+	CHECK(decodeCaesar("z") == "e");
+	CHECK(decodeCaesar("0") == "0");
+	CHECK(decodeCaesar(fileToString("testZCoded.txt")) == fileToString("testZDecoded.txt"));
+	CHECK(decodeCaesar(encryptCaesar(fileToString("testZCoded.txt"), 0)) == fileToString("testZDecoded.txt"));
+	CHECK(decodeCaesar(encryptCaesar(fileToString("testZCoded.txt"), 25)) == fileToString("testZDecoded.txt"));	
+	CHECK(decodeCaesar(fileToString("testZDecoded.txt")) == fileToString("testZDecoded.txt"));
+	CHECK(decodeCaesar(fileToString("testClassCoded.txt")) == fileToString("testClassDecoded.txt"));
+	CHECK(decodeCaesar(fileToString("testDescCoded.txt")) == fileToString("testDescDecoded.txt"));
 }

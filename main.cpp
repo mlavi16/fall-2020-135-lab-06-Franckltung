@@ -7,6 +7,7 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 int main()
 {	
@@ -19,6 +20,7 @@ int main()
 	std::cout << "Shift: 10\n";
 	std::cout << "Ciphertext: " << encryptCaesar(plaintext, 10) << "\n";
 	std::cout << "Decrypted: " << decryptCaesar(encryptCaesar(plaintext, 10), 10) << "\n";
+	std::cout << "Decoded(likely): " << decodeCaesar(encryptCaesar(plaintext, 10)) << "\n"; // Doesn't work on this short string
 
 	std::cout << "\n= Vigenere =\n";
 	std::cout << "Keyword: cake\n";

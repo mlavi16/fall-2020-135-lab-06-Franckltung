@@ -1,0 +1,17 @@
+Here's are schedule and lab moving forward:
+
+Here's a link to lab 8. It's due one week from today 8:00am (Oct 23):
+https://classroom.github.com/a/8gEUpCFS
+
+Instead of an in person class on Monday 10/19, you'll be given that time (which you can use whenever you want) to complete an additional assignment - adding an automatic decoder for a string that was encoded using a Caesar cipher.
+There are some notes up on classcode for reference.
+
+Add a routine decode.cpp to your lab 6 repository and test it via doctest.
+
+decode should try every rotation and for each calculate its distance to the vector of letter frequencies as we discussed in class. The rotation that's closes to that frequency vector is probably the decoded stirng.
+
+You can just type in the vector of frequencies - wikipedia has one if you search for "English letter frequencies."
+
+This will be due 2 weeks from today at 8:00am (Oct 30). As stated before, this just gets added to your lab 6 repo.
+
+I've exported your lab 7 but won't be grading them until after we talk about them and the assorted design decisions you made in class at our next live session.

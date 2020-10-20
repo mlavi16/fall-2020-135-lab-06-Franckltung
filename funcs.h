@@ -16,3 +16,5 @@ bool isUpperCase(char c);
 
 // Shifts alphabetic characters by rshift, ignores non-alphabetics
 char shiftChar(char cAlphabetic, int rshift);
+
+std::string fileToString(std::string filename);

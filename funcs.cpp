@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "funcs.h"
 
 void test_ascii(std::string text) {
@@ -51,3 +52,21 @@ char shiftChar(char cAlphabetic, int rshift) {
 	return firstLetter + cIndex; // Return the first character of the alphabet plus the clamped shift
 }
 
+std::string fileToString(std::string filename) {
+	std::string str;
+	
+	std::ifstream file(filename);
+	if (!file) {
+		std::cout << "Error opening \"" << filename << "\".\n";
+		return "";
+	}
+	
+	std::string line;
+	while (getline(file, line)) {
+		str += line + "\n";
+	}
+
+	file.close();
+
+	return str;
+}
