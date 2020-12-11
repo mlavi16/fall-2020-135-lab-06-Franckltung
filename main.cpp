@@ -27,5 +27,10 @@ int main()
 	std::cout << "Ciphertext: " << encryptVigenere(plaintext, "cake") << "\n";
 	std::cout << "Decrypted: " << decryptVigenere(encryptVigenere(plaintext, "cake"), "cake") << "\n";
 
+	/*
+	I like your code! Very thorough. 
+	I have nothing to add but this smiley face :)
+	*/
+
 	return 0;
 }
